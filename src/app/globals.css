@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
+@theme {
   --color-dark: #161A18;
   --color-dark-2: #1F2320;
   --color-paper: #F1EFEA;
@@ -11,7 +11,9 @@
   --color-grey-mid: #8A8780;
   --color-grey-soft: #B8B5AC;
   --color-ink: #17181A;
+}
 
+@theme inline {
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --font-mono: var(--font-mono);
