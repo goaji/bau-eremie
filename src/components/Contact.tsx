@@ -39,16 +39,14 @@ export default function Contact() {
             <div className="mb-6.5 pb-6.5 border-b border-grey-line">
               <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">Adresse</div>
               <div className="text-base font-medium text-white">
-                Musterstraße 12, 84518 Garching a.d.Alz{' '}
-                <span className="font-mono text-[11px] text-[#B5B09F]">(Platzhalter)</span>
+                Hütweg 19, 84518 Garching a.d.Alz
               </div>
             </div>
 
             <div className="mb-6.5 pb-6.5 border-b border-grey-line">
-              <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">Telefon</div>
-              <a className="text-base font-medium text-white no-underline hover:text-red" href="tel:+498634000000">
-                08634 / 000 00{' '}
-                <span className="font-mono text-[11px] text-[#B5B09F]">(Platzhalter)</span>
+              <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">Telefon (auch WhatsApp)</div>
+              <a className="text-base font-medium text-white no-underline hover:text-red" href="tel:+491627141491">
+               (+49) 0162 7141491
               </a>
             </div>
 
@@ -56,15 +54,10 @@ export default function Contact() {
               <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">E-Mail</div>
               <a
                 className="text-base font-medium text-white no-underline hover:text-red"
-                href="mailto:info@adrian-eremie-platzhalter.de"
+                href="mailto:info@bau-eremie.de"
               >
-                info@adrian-eremie-platzhalter.de
+                info@bau-eremie.de
               </a>
-            </div>
-
-            <div className="mb-6.5 pb-6.5 border-b border-grey-line">
-              <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">Bürozeiten</div>
-              <div className="text-base font-medium text-white">Mo–Fr, 08:00–17:00 Uhr</div>
             </div>
 
             <div>
