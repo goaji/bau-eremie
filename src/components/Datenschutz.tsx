@@ -27,12 +27,16 @@ export default function Datenschutz() {
               2. Kontaktformular
             </h2>
             <p className="text-[15px] leading-relaxed mb-2">
-              Wenn Sie das Kontaktformular nutzen, verarbeiten wir die von Ihnen
-              angegebenen Daten (Name, E-Mail-Adresse, optional Telefonnummer,
-              Art des Vorhabens, Nachricht) ausschließlich zur Bearbeitung Ihrer
-              Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
-              (vorvertragliche Maßnahme) bzw. Art. 6 Abs. 1 lit. f DSGVO
-              (berechtigtes Interesse an der Beantwortung von Anfragen).
+              Wenn Sie das Kontaktformular nutzen, verarbeiten wir die von Ihnen angegebenen Daten
+              (Name, E-Mail-Adresse, optional Telefonnummer, Art des Vorhabens, Nachricht)
+              ausschließlich zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b
+              DSGVO (vorvertragliche Maßnahme) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+              Interesse an der Beantwortung von Anfragen).
+            </p>
+            <p className="text-[15px] leading-relaxed text-[#4B4943]">
+              Der Versand erfolgt über den E-Mail-Dienst unseres Hosting-Anbieters Hostinger
+              (Hostinger International Ltd.) per SMTP. Die eingegebenen Daten werden dabei nicht an
+              weitere Drittanbieter übermittelt. 
             </p>
           </section>
 
