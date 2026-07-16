@@ -1,6 +1,17 @@
 "use server";
 
 import { z } from "zod";
+import nodemailer from "nodemailer";
+
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: true,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Bitte geben Sie Ihren Namen an."),
@@ -36,8 +47,31 @@ export async function submitContactForm(
     return { success: false, message: firstError };
   }
 
-  // TODO: actually send the email
-  console.log("Neue Kontaktanfrage:", result.data);
+  const { name, email, phone, message } = result.data;
+
+  try {
+    await transporter.sendMail({
+      from: `"Website Anfrage" <${process.env.SMTP_USER}>`,
+      to: process.env.CONTACT_RECIPIENT,
+      replyTo: email,
+      subject: `Neue Anfrage von ${name} `,
+      text: `
+Name: ${name}
+E-Mail: ${email}
+Telefon: ${phone || "—"}
+
+Nachricht:
+${message || "—"}
+      `.trim(),
+    });
+  } catch (error) {
+    console.error("SMTP error:", error);
+    return {
+      success: false,
+      message:
+        "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
+    };
+  }
 
   return {
     success: true,
