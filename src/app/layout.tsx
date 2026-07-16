@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono, Big_Shoulders } from "next/font/google";
 import "./globals.css";
 
@@ -18,6 +19,15 @@ const monoFont = IBM_Plex_Mono({
   weight: ["400", "500"],
   variable: "--font-mono",
 });
+
+export const metadata: Metadata = {
+  title: {
+    default: "Adrian Eremie · Bauunternehmen, Planung & Energieberatung",
+    template: "%s · Adrian Eremie",
+  },
+  description:
+    "Bauunternehmen, Planung und zertifizierte Energieberatung aus einer Hand – Adrian Eremie, tätig in Garching an der Alz und Umgebung.",
+};
 
 export default function RootLayout({
   children,
