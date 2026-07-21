@@ -8,14 +8,14 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-dark border-b border-black">
+    <header className="sticky top-0 z-50 bg-white border-b border-black">
       <div className="flex items-center justify-between px-8 py-8.5 max-w-300 mx-auto">
         <Link
           href="/"
-          className="flex items-center gap-4.5 font-display font-extrabold text-[31px] tracking-wide text-white no-underline"
+          className="flex items-center gap-4.5 font-display font-extrabold text-[31px] tracking-wide  no-underline"
         >
           <Image
-            src="/logo.png"
+            src="/logoDark.svg"
             alt="Adrian Eremie Logo"
             width={64}
             height={66}
@@ -23,8 +23,8 @@ export default function Header() {
           />
           <span>
             ADRIAN EREMIE
-            <span className="block font-mono font-normal text-[13px] tracking-[0.14em] text-grey-soft uppercase">
-              Planen. Bauen. Vertrauen.
+            <span className="block font-mono font-normal text-[13px] tracking-[0.14em]  uppercase">
+              Planen. <span className="text-red">Bauen</span>. Vertrauen.
             </span>
           </span>
         </Link>
@@ -44,13 +44,13 @@ export default function Header() {
         >
           <Link
             href="/#leistungen"
-            className="text-paper-2 hover:text-white no-underline text-[16.5px] font-medium"
+            className=" hover:text-red no-underline text-[16.5px] font-medium"
           >
             Leistungen
           </Link>
           <Link
             href="/#kontakt"
-            className="text-paper-2 hover:text-white no-underline text-[16.5px] font-medium"
+            className=" hover:text-red no-underline text-[16.5px] font-medium"
           >
             Kontakt
           </Link>

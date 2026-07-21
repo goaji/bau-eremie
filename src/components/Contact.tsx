@@ -31,10 +31,10 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-[0.85fr_1.15fr] gap-16 mt-12">
           <div>
-            <p className="text-[15.5px] text-paper-2 max-w-95 mb-8">
-              Erzählen Sie uns kurz von Ihrem Vorhaben — wir melden uns mit einem Termin für ein
-              unverbindliches Erstgespräch.
-            </p>
+            <div className="mb-6.5 pb-6.5 border-b border-grey-line">
+              <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">Einsatzgebiet</div>
+              <div className="text-base font-medium text-white">Unser Einsatzgebiet umfasst die Region Inn-Salzach sowie den gesamten südostbayerischen Raum. Je nach Projektgröße und Leistungsumfang sind wir auch darüber hinaus für Sie im Einsatz. Sprechen Sie uns gerne an.</div>
+            </div>
 
             <div className="mb-6.5 pb-6.5 border-b border-grey-line">
               <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">Adresse</div>
@@ -50,7 +50,7 @@ export default function Contact() {
               </a>
             </div>
 
-            <div className="mb-6.5 pb-6.5 border-b border-grey-line">
+            <div >
               <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">E-Mail</div>
               <a
                 className="text-base font-medium text-white no-underline hover:text-red"
@@ -58,14 +58,6 @@ export default function Contact() {
               >
                 info@bau-eremie.de
               </a>
-            </div>
-
-            <div>
-              <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">Einsatzgebiet</div>
-              <div className="text-base font-medium text-white">Garching an der Alz und Umgebung</div>
-              <div className="font-mono text-[11px] text-[#B5B09F] mt-1.5">
-                u. a. Altötting, Neuötting, Mühldorf a. Inn, Burghausen, Unterneukirchen, Engelsberg, Tacherting
-              </div>
             </div>
           </div>
 

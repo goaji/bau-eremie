@@ -2,35 +2,63 @@ import Image from "next/image";
 
 const services = [
   {
-    title: "Rohbau & Ausbau",
+    title: "Schlüsselfertiges Bauen",
     description:
-      "Von der Bodenplatte bis zur schlüsselfertigen Übergabe — in Eigenleistung und mit geprüften Partnerbetrieben.",
+      "Sie möchten nur einen Ansprechpartner für Ihr gesamtes Bauvorhaben? Wir koordinieren alle notwendigen Gewerke und begleiten Ihr Projekt von der Planung bis zur schlüsselfertigen Übergabe.",
     items: [
-      "Neubau & Rohbau",
-      "Sanierung & Modernisierung",
-      "Innenausbau, schlüsselfertig",
+      "Ein- und Mehrfamilienhäuser",
+      "An- und Umbauten",
+      "Sanierungen",
+      "Koordination aller Gewerke",
+      "Bauleitung und Terminplanung",
+      "Schlüsselfertige Ausführung",
+      "Persönliche Betreuung während der gesamten Bauzeit"
     ],
     iconSrc: "/icons/crane.svg",
   },
   {
-    title: "Planung & Baupläne",
+    title: "Baumeisterarbeiten",
     description:
-      "Eigene Bauplanung statt externem Büro: Entwurf, Genehmigungsplanung und Abstimmung mit Statik und Behörden.",
+      "Wir übernehmen sämtliche klassischen Baumeisterarbeiten – präzise, zuverlässig und termingerecht.",
     items: [
-      "Bau- & Ausführungspläne",
-      "Bauantrag & Genehmigung",
-      "Abstimmung mit Statiker",
+      "Rohbau",
+      "Maurerarbeiten",
+      "Stahlbetonarbeiten",
+      "Schalungsarbeiten",
+      "Fundamente und Bodenplatten",
+      "Ortbetontreppen",
+      "Betonfertigteile",
+      "Putzarbeiten",
+      "Pflasterarbeiten"
     ],
     iconSrc: "/icons/blueprint.svg",
   },
   {
+    title: "Planung",
+    description:
+      "Eine sorgfältige Planung bildet die Grundlage für jedes erfolgreiche Bauprojekt.",
+    items: [
+      "Entwurfsplanung",
+      "Genehmigungsplanung",
+      "Ausführungsplanung",
+      "Bauzeichnungen",
+      "Werk- und Detailplanung",
+      "Massenermittlung",
+      "Technische Beratung"
+    ],
+    iconSrc: "/icons/energy.svg",
+  },  
+  {
     title: "Energieberatung",
     description:
-      "Zertifizierte Beratung nach Gebäudeenergiegesetz — von der Bestandsanalyse bis zur Fördermittelberatung.",
+      "Wir unterstützen Sie dabei, Ihr Gebäude energieeffizient und zukunftssicher zu gestalten.",
     items: [
-      "Energieausweis",
-      "GEG-konforme Beratung",
-      "Fördermittel (KfW / BAFA)",
+     "Energieberatung",
+     "Individuelle Sanierungsfahrpläne (iSFP)",
+     "Energieausweise",
+     "Fördermittelberatung",
+     "Energetische Sanierung",
+     "GEG-Nachweise"
     ],
     iconSrc: "/icons/energy.svg",
   },
@@ -40,7 +68,7 @@ export default function Services() {
   return (
     <section className="bg-paper pt-10 pb-16" id="leistungen">
       <h2 className="sr-only">Leistungen</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-4">
         {services.map((service, i) => (
           <div
             key={service.title}
