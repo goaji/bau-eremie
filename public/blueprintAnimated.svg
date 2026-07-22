@@ -16,24 +16,473 @@
     .bp-text-red { font-family: 'IBM Plex Mono', monospace; fill: #C1392B; font-size: 11.5px; font-weight: 500; }
     .bp-dash { stroke: #514F49; stroke-width: 1; stroke-dasharray: 3 3; fill: none; }
 
-    /* draw-on: element carries pathLength="1" so one unit == its full length */
-    @keyframes bpDraw { to { stroke-dashoffset: 0; } }
-    @keyframes bpFade { to { opacity: 1; } }
-    .d {
+    
+    .loopD {
       stroke-dasharray: 1;
       stroke-dashoffset: 1;
-      animation: bpDraw var(--dur, .7s) cubic-bezier(.45,.05,.35,1) forwards;
-      animation-delay: var(--at, 0s);
+      animation-duration: 20.0s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
-    .f {
+    .loopF {
       opacity: 0;
-      animation: bpFade var(--dur, .45s) ease-out forwards;
-      animation-delay: var(--at, 0s);
+      animation-duration: 20.0s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
     @media (prefers-reduced-motion: reduce) {
-      .d { stroke-dashoffset: 0; animation: none; }
-      .f { opacity: 1; animation: none; }
+      .loopD { stroke-dashoffset: 0; animation: none; }
+      .loopF { opacity: 1; animation: none; }
     }
+
+@keyframes k0{
+0%{stroke-dashoffset:1;opacity:1}
+1.0%{stroke-dashoffset:1;opacity:1}
+3.5%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k1{
+0%{opacity:0}
+3.25%{opacity:0}
+5.5%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k2{
+0%{opacity:0}
+4.0%{opacity:0}
+6.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k3{
+0%{stroke-dashoffset:1;opacity:1}
+2.5%{stroke-dashoffset:1;opacity:1}
+5.0%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k4{
+0%{stroke-dashoffset:1;opacity:1}
+4.0%{stroke-dashoffset:1;opacity:1}
+6.5%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k5{
+0%{stroke-dashoffset:1;opacity:1}
+6.0%{stroke-dashoffset:1;opacity:1}
+7.5%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k6{
+0%{stroke-dashoffset:1;opacity:1}
+6.5%{stroke-dashoffset:1;opacity:1}
+8.0%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k7{
+0%{stroke-dashoffset:1;opacity:1}
+5.0%{stroke-dashoffset:1;opacity:1}
+7.5%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k8{
+0%{stroke-dashoffset:1;opacity:1}
+7.0%{stroke-dashoffset:1;opacity:1}
+8.5%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k9{
+0%{stroke-dashoffset:1;opacity:1}
+7.5%{stroke-dashoffset:1;opacity:1}
+9.0%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k10{
+0%{opacity:0}
+8.5%{opacity:0}
+11.5%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k11{
+0%{opacity:0}
+10.0%{opacity:0}
+12.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k12{
+0%{stroke-dashoffset:1;opacity:1}
+11.0%{stroke-dashoffset:1;opacity:1}
+13.0%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k13{
+0%{stroke-dashoffset:1;opacity:1}
+12.25%{stroke-dashoffset:1;opacity:1}
+13.5%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k14{
+0%{stroke-dashoffset:1;opacity:1}
+12.75%{stroke-dashoffset:1;opacity:1}
+14.0%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k15{
+0%{opacity:0}
+14.0%{opacity:0}
+16.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k16{
+0%{opacity:0}
+14.5%{opacity:0}
+16.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k17{
+0%{opacity:0}
+15.0%{opacity:0}
+17.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k18{
+0%{opacity:0}
+15.5%{opacity:0}
+17.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k19{
+0%{stroke-dashoffset:1;opacity:1}
+16.0%{stroke-dashoffset:1;opacity:1}
+19.5%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k20{
+0%{stroke-dashoffset:1;opacity:1}
+19.0%{stroke-dashoffset:1;opacity:1}
+20.25%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k21{
+0%{stroke-dashoffset:1;opacity:1}
+19.5%{stroke-dashoffset:1;opacity:1}
+20.75%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k22{
+0%{opacity:0}
+20.5%{opacity:0}
+22.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k23{
+0%{opacity:0}
+17.0%{opacity:0}
+19.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k24{
+0%{opacity:0}
+17.5%{opacity:0}
+19.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k25{
+0%{stroke-dashoffset:1;opacity:1}
+18.0%{stroke-dashoffset:1;opacity:1}
+21.5%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k26{
+0%{stroke-dashoffset:1;opacity:1}
+21.0%{stroke-dashoffset:1;opacity:1}
+22.25%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k27{
+0%{stroke-dashoffset:1;opacity:1}
+21.5%{stroke-dashoffset:1;opacity:1}
+22.75%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k28{
+0%{opacity:0}
+22.5%{opacity:0}
+24.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k29{
+0%{stroke-dashoffset:1;opacity:1}
+23.0%{stroke-dashoffset:1;opacity:1}
+26.0%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k30{
+0%{opacity:0}
+25.5%{opacity:0}
+27.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k31{
+0%{stroke-dashoffset:1;opacity:1}
+26.0%{stroke-dashoffset:1;opacity:1}
+29.0%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k32{
+0%{opacity:0}
+28.0%{opacity:0}
+30.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k33{
+0%{opacity:0}
+28.5%{opacity:0}
+30.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k34{
+0%{opacity:0}
+29.0%{opacity:0}
+31.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k35{
+0%{opacity:0}
+30.0%{opacity:0}
+32.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k36{
+0%{opacity:0}
+30.5%{opacity:0}
+32.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k37{
+0%{opacity:0}
+31.5%{opacity:0}
+34.0%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k38{
+0%{opacity:0}
+32.5%{opacity:0}
+34.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k39{
+0%{opacity:0}
+33.0%{opacity:0}
+35.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k40{
+0%{opacity:0}
+34.0%{opacity:0}
+36.5%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k41{
+0%{opacity:0}
+35.0%{opacity:0}
+37.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k42{
+0%{opacity:0}
+35.5%{opacity:0}
+37.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k43{
+0%{opacity:0}
+36.5%{opacity:0}
+39.0%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k44{
+0%{opacity:0}
+38.0%{opacity:0}
+40.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k45{
+0%{opacity:0}
+38.5%{opacity:0}
+40.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k46{
+0%{stroke-dashoffset:1;opacity:1}
+39.5%{stroke-dashoffset:1;opacity:1}
+43.5%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k47{
+0%{stroke-dashoffset:1;opacity:1}
+42.5%{stroke-dashoffset:1;opacity:1}
+44.5%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k48{
+0%{stroke-dashoffset:1;opacity:1}
+43.0%{stroke-dashoffset:1;opacity:1}
+44.75%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k49{
+0%{stroke-dashoffset:1;opacity:1}
+43.5%{stroke-dashoffset:1;opacity:1}
+45.25%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k50{
+0%{stroke-dashoffset:1;opacity:1}
+44.0%{stroke-dashoffset:1;opacity:1}
+45.75%{stroke-dashoffset:0;opacity:1}
+80.0%{stroke-dashoffset:0;opacity:1}
+87.5%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:0;opacity:0}
+}
+@keyframes k51{
+0%{opacity:0}
+45.0%{opacity:0}
+47.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k52{
+0%{opacity:0}
+45.5%{opacity:0}
+47.75%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k53{
+0%{opacity:0}
+45.75%{opacity:0}
+48.0%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k54{
+0%{opacity:0}
+46.0%{opacity:0}
+48.25%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
+@keyframes k55{
+0%{opacity:0}
+46.25%{opacity:0}
+48.5%{opacity:1}
+80.0%{opacity:1}
+87.5%{opacity:0}
+100%{opacity:0}
+}
   </style>
 
   <!-- remove this rect if the page already has a dark background -->
@@ -44,79 +493,61 @@
   <path class="bp-line" d="M140 460V300L300 180L460 300V460"/>
   <path class="bp-line" d="M120 460H480"/>
 
-  <!-- ===== animated layer ===== -->
-
-  <!-- north arrow -->
-  <path class="bp-line d" style="--at:.2s;--dur:.5s" pathLength="1" d="M50 62V28"/>
-  <path class="f" style="--at:.65s" d="M50 20L44 34H56Z" fill="#5C5A53"/>
-  <text class="bp-text f" style="--at:.8s" x="50" y="80" text-anchor="middle">N</text>
-
-  <!-- door + windows -->
-  <path class="bp-line d" style="--at:.5s;--dur:.5s" pathLength="1" d="M282 380h36v80h-36z"/>
-  <path class="bp-line d" style="--at:.8s;--dur:.5s" pathLength="1" d="M180 340h46v46h-46z"/>
-  <path class="bp-line d" style="--at:1.2s;--dur:.3s" pathLength="1" d="M203 340v46"/>
-  <path class="bp-line d" style="--at:1.3s;--dur:.3s" pathLength="1" d="M180 363h46"/>
-  <path class="bp-line d" style="--at:1s;--dur:.5s" pathLength="1" d="M414 340h46v46h-46z"/>
-  <path class="bp-line d" style="--at:1.4s;--dur:.3s" pathLength="1" d="M437 340v46"/>
-  <path class="bp-line d" style="--at:1.5s;--dur:.3s" pathLength="1" d="M414 363h46"/>
-
-  <!-- foundation / ground -->
-  <rect class="f" style="--at:1.7s;--dur:.6s" x="120" y="460" width="360" height="34" fill="url(#soilHatch)"/>
-  <path class="bp-dash f" style="--at:2s" d="M120 494H480"/>
-  <path class="bp-red d" style="--at:2.2s;--dur:.4s" pathLength="1" d="M100 460V494"/>
-  <path class="bp-red d" style="--at:2.45s;--dur:.25s" pathLength="1" d="M92 460h16"/>
-  <path class="bp-red d" style="--at:2.55s;--dur:.25s" pathLength="1" d="M92 494h16"/>
-  <text class="bp-text-red f" style="--at:2.8s" x="78" y="481" text-anchor="end">0,80 m</text>
-  <text class="bp-text f" style="--at:2.9s" x="78" y="495" text-anchor="end">Gründung</text>
-
-  <!-- top dimension -->
-  <path class="bp-dash f" style="--at:3s" d="M140 300V110"/>
-  <path class="bp-dash f" style="--at:3.1s" d="M460 300V110"/>
-  <path class="bp-red d" style="--at:3.2s;--dur:.7s" pathLength="1" d="M140 110H460"/>
-  <path class="bp-red d" style="--at:3.8s;--dur:.25s" pathLength="1" d="M140 102v16"/>
-  <path class="bp-red d" style="--at:3.9s;--dur:.25s" pathLength="1" d="M460 102v16"/>
-  <text class="bp-text-red f" style="--at:4.1s" x="270" y="98" text-anchor="middle">9,60 m</text>
-
-  <!-- side dimension -->
-  <path class="bp-dash f" style="--at:3.4s" d="M460 300H520"/>
-  <path class="bp-dash f" style="--at:3.5s" d="M460 460H520"/>
-  <path class="bp-red d" style="--at:3.6s;--dur:.7s" pathLength="1" d="M520 180V460"/>
-  <path class="bp-red d" style="--at:4.2s;--dur:.25s" pathLength="1" d="M512 180h16"/>
-  <path class="bp-red d" style="--at:4.3s;--dur:.25s" pathLength="1" d="M512 460h16"/>
-  <text class="bp-text-red f" style="--at:4.5s" x="536" y="324" transform="rotate(90 536 324)">6,40 m</text>
-
-  <!-- wall detail callout -->
-  <path class="bp-red d" style="--at:4.6s;--dur:.6s" pathLength="1" d="M140 347a13 13 0 1 1-.01 0"/>
-  <path class="bp-dash f" style="--at:5.1s" d="M127 352L60 230"/>
-  <path class="bp-line d" style="--at:5.2s;--dur:.6s" pathLength="1" d="M30 150h90v70h-90z"/>
-  <rect class="f" style="--at:5.6s" x="34" y="154" width="14" height="62" fill="#3A3934"/>
-  <rect class="f" style="--at:5.7s" x="48" y="154" width="34" height="62" fill="#514F49"/>
-  <rect class="f" style="--at:5.8s" x="82" y="154" width="10" height="62" fill="#3A3934"/>
-  <text class="bp-text f" style="--at:6s" x="30" y="238">Wandaufbau</text>
-  <text class="bp-text-red f" style="--at:6.1s" x="30" y="252">U = 0,18 W/m²K</text>
-
-  <!-- leader lines to services -->
-  <path class="bp-dash f" style="--at:6.3s;--dur:.5s" d="M300 180L560 150"/>
-  <circle class="bp-red-fill f" style="--at:6.5s" cx="300" cy="180" r="3.5"/>
-  <text class="bp-text-red f" style="--at:6.6s" x="565" y="146">Planung &amp; Statik</text>
-
-  <path class="bp-dash f" style="--at:6.8s;--dur:.5s" d="M460 430L560 330"/>
-  <circle class="bp-red-fill f" style="--at:7s" cx="460" cy="430" r="3.5"/>
-  <text class="bp-text-red f" style="--at:7.1s" x="565" y="326">Rohbau &amp; Ausbau</text>
-
-  <path class="bp-dash f" style="--at:7.3s;--dur:.5s" d="M153 360L560 470"/>
-  <text class="bp-text-red f" style="--at:7.6s" x="565" y="466">Energieberatung</text>
-  <text class="bp-text-red f" style="--at:7.7s" x="565" y="482">(GEG)</text>
-
-  <!-- title block / plan stamp -->
-  <path class="bp-line d" style="--at:7.9s;--dur:.8s" pathLength="1" d="M340 560h260v76h-260z"/>
-  <path class="bp-red d" style="--at:8.5s;--dur:.4s" pathLength="1" d="M340 560H600"/>
-  <path class="bp-line d" style="--at:8.6s;--dur:.35s" pathLength="1" d="M340 584H600"/>
-  <path class="bp-line d" style="--at:8.7s;--dur:.35s" pathLength="1" d="M340 608H600"/>
-  <path class="bp-line d" style="--at:8.8s;--dur:.35s" pathLength="1" d="M460 584v52"/>
-  <text class="bp-text f" style="--at:9s" x="350" y="576">OBJEKT · EFH GARCHING A.D.ALZ</text>
-  <text class="bp-text f" style="--at:9.1s" x="350" y="600">MASSSTAB 1:100</text>
-  <text class="bp-text f" style="--at:9.15s" x="470" y="600">PLANSKIZZE</text>
-  <text class="bp-text f" style="--at:9.2s" x="350" y="624">GEZ. A. EREMIE</text>
-  <text class="bp-text f" style="--at:9.25s" x="470" y="624">STAND 07/2026</text>
+  <!-- ===== animated layer (looping) ===== -->
+  <path class="bp-line loopD" style="animation-name:k0" pathLength="1" d="M50 62V28"/>
+  <path class="loopF" style="animation-name:k1" d="M50 20L44 34H56Z" fill="#5C5A53"/>
+  <text class="bp-text loopF" style="animation-name:k2" x="50" y="80" text-anchor="middle">N</text>
+  <path class="bp-line loopD" style="animation-name:k3" pathLength="1" d="M282 380h36v80h-36z"/>
+  <path class="bp-line loopD" style="animation-name:k4" pathLength="1" d="M180 340h46v46h-46z"/>
+  <path class="bp-line loopD" style="animation-name:k5" pathLength="1" d="M203 340v46"/>
+  <path class="bp-line loopD" style="animation-name:k6" pathLength="1" d="M180 363h46"/>
+  <path class="bp-line loopD" style="animation-name:k7" pathLength="1" d="M414 340h46v46h-46z"/>
+  <path class="bp-line loopD" style="animation-name:k8" pathLength="1" d="M437 340v46"/>
+  <path class="bp-line loopD" style="animation-name:k9" pathLength="1" d="M414 363h46"/>
+  <rect class="loopF" style="animation-name:k10" x="120" y="460" width="360" height="34" fill="url(#soilHatch)"/>
+  <path class="bp-dash loopF" style="animation-name:k11" d="M120 494H480"/>
+  <path class="bp-red loopD" style="animation-name:k12" pathLength="1" d="M100 460V494"/>
+  <path class="bp-red loopD" style="animation-name:k13" pathLength="1" d="M92 460h16"/>
+  <path class="bp-red loopD" style="animation-name:k14" pathLength="1" d="M92 494h16"/>
+  <text class="bp-text-red loopF" style="animation-name:k15" x="78" y="481" text-anchor="end">0,80 m</text>
+  <text class="bp-text loopF" style="animation-name:k16" x="78" y="495" text-anchor="end">Gründung</text>
+  <path class="bp-dash loopF" style="animation-name:k17" d="M140 300V110"/>
+  <path class="bp-dash loopF" style="animation-name:k18" d="M460 300V110"/>
+  <path class="bp-red loopD" style="animation-name:k19" pathLength="1" d="M140 110H460"/>
+  <path class="bp-red loopD" style="animation-name:k20" pathLength="1" d="M140 102v16"/>
+  <path class="bp-red loopD" style="animation-name:k21" pathLength="1" d="M460 102v16"/>
+  <text class="bp-text-red loopF" style="animation-name:k22" x="270" y="98" text-anchor="middle">9,60 m</text>
+  <path class="bp-dash loopF" style="animation-name:k23" d="M460 300H520"/>
+  <path class="bp-dash loopF" style="animation-name:k24" d="M460 460H520"/>
+  <path class="bp-red loopD" style="animation-name:k25" pathLength="1" d="M520 180V460"/>
+  <path class="bp-red loopD" style="animation-name:k26" pathLength="1" d="M512 180h16"/>
+  <path class="bp-red loopD" style="animation-name:k27" pathLength="1" d="M512 460h16"/>
+  <text class="bp-text-red loopF" style="animation-name:k28" x="536" y="324" transform="rotate(90 536 324)">6,40 m</text>
+  <path class="bp-red loopD" style="animation-name:k29" pathLength="1" d="M140 347a13 13 0 1 1-.01 0"/>
+  <path class="bp-dash loopF" style="animation-name:k30" d="M127 352L60 230"/>
+  <path class="bp-line loopD" style="animation-name:k31" pathLength="1" d="M30 150h90v70h-90z"/>
+  <rect class="loopF" style="animation-name:k32" x="34" y="154" width="14" height="62" fill="#3A3934"/>
+  <rect class="loopF" style="animation-name:k33" x="48" y="154" width="34" height="62" fill="#514F49"/>
+  <rect class="loopF" style="animation-name:k34" x="82" y="154" width="10" height="62" fill="#3A3934"/>
+  <text class="bp-text loopF" style="animation-name:k35" x="30" y="238">Wandaufbau</text>
+  <text class="bp-text-red loopF" style="animation-name:k36" x="30" y="252">U = 0,18 W/m²K</text>
+  <path class="bp-dash loopF" style="animation-name:k37" d="M300 180L560 150"/>
+  <circle class="bp-red-fill loopF" style="animation-name:k38" cx="300" cy="180" r="3.5"/>
+  <text class="bp-text-red loopF" style="animation-name:k39" x="565" y="146">Planung &amp; Statik</text>
+  <path class="bp-dash loopF" style="animation-name:k40" d="M460 430L560 330"/>
+  <circle class="bp-red-fill loopF" style="animation-name:k41" cx="460" cy="430" r="3.5"/>
+  <text class="bp-text-red loopF" style="animation-name:k42" x="565" y="326">Rohbau &amp; Ausbau</text>
+  <path class="bp-dash loopF" style="animation-name:k43" d="M153 360L560 470"/>
+  <text class="bp-text-red loopF" style="animation-name:k44" x="565" y="466">Energieberatung</text>
+  <text class="bp-text-red loopF" style="animation-name:k45" x="565" y="482">(GEG)</text>
+  <path class="bp-line loopD" style="animation-name:k46" pathLength="1" d="M340 560h260v76h-260z"/>
+  <path class="bp-red loopD" style="animation-name:k47" pathLength="1" d="M340 560H600"/>
+  <path class="bp-line loopD" style="animation-name:k48" pathLength="1" d="M340 584H600"/>
+  <path class="bp-line loopD" style="animation-name:k49" pathLength="1" d="M340 608H600"/>
+  <path class="bp-line loopD" style="animation-name:k50" pathLength="1" d="M460 584v52"/>
+  <text class="bp-text loopF" style="animation-name:k51" x="350" y="576">OBJEKT · EFH GARCHING A.D.ALZ</text>
+  <text class="bp-text loopF" style="animation-name:k52" x="350" y="600">MASSSTAB 1:100</text>
+  <text class="bp-text loopF" style="animation-name:k53" x="470" y="600">PLANSKIZZE</text>
+  <text class="bp-text loopF" style="animation-name:k54" x="350" y="624">GEZ. A. EREMIE</text>
+  <text class="bp-text loopF" style="animation-name:k55" x="470" y="624">STAND 07/2026</text>
 </svg>
