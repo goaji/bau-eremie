@@ -15,10 +15,10 @@ export default function Services() {
               className={`p-8 bg-white flex flex-col border-b md:border-b-0 border-[#C9C5BB] ${i < SERVICES.length - 1 ? "md:border-r" : ""
                 }`}
             >
-              <div className="w-11 h-11 flex items-center justify-center mb-4.5">
-                <Image src={service.iconSrc} alt="" width={40} height={40} />
+              <div className="w-15 h-15 mb-4.5 ">
+                <Image src={service.iconSrc} alt="" width={50} height={50} className="w-full h-full object-contain" />
               </div>
-              <h3 className="font-display font-bold text-2xl mb-3.5 text-red">
+              <h3 className="font-display font-bold text-2xl mb-3.5 ">
                 {service.title}
               </h3>
               <p className="text-[15px] text-[#4B4943] mb-5 grow">

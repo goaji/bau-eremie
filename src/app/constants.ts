@@ -12,7 +12,7 @@ export const SERVICES = [
       "Schlüsselfertige Ausführung",
       "Persönliche Betreuung während der gesamten Bauzeit"
     ],
-    iconSrc: "/icons/crane.svg",
+    iconSrc: "/icons/key.svg",
   },
   {
     title: "Baumeisterarbeiten",
@@ -29,7 +29,7 @@ export const SERVICES = [
       "Putzarbeiten",
       "Pflasterarbeiten"
     ],
-    iconSrc: "/icons/blueprint.svg",
+    iconSrc: "/icons/bau.svg",
   },
   {
     title: "Planung",
@@ -44,7 +44,7 @@ export const SERVICES = [
       "Massenermittlung",
       "Technische Beratung"
     ],
-    iconSrc: "/icons/energy.svg",
+    iconSrc: "/icons/plan.svg",
   },
   {
     title: "Energieberatung",
@@ -58,6 +58,6 @@ export const SERVICES = [
       "Energetische Sanierung",
       "GEG-Nachweise"
     ],
-    iconSrc: "/icons/energy.svg",
+    iconSrc: "/icons/greenhouse.svg",
   },
 ];
