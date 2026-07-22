@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import AnfrageButton from "@/components/AnfrageButton";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,12 +55,7 @@ export default function Header() {
           >
             Kontakt
           </Link>
-          <Link
-            href="/#kontakt"
-            className="bg-red text-white px-6 py-3.25 text-base font-semibold no-underline hover:bg-red-deep transition-colors"
-          >
-            Anfrage senden
-          </Link>
+          <AnfrageButton label="Anfrage senden" href="/#kontakt" />
         </nav>
       </div>
     </header>

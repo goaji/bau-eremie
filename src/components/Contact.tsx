@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useState } from 'react';
 import { submitContactForm, type ContactFormState } from '@/app/actions';
+import AnfrageButton from '@/components/AnfrageButton';
 
 const initialState: ContactFormState = { success: false, message: '' };
 
@@ -46,7 +47,7 @@ export default function Contact() {
             <div className="mb-6.5 pb-6.5 border-b border-grey-line">
               <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">Telefon (auch WhatsApp)</div>
               <a className="text-base font-medium text-white no-underline hover:text-red" href="tel:+491627141491">
-               (+49) 0162 7141491
+                (+49) 0162 7141491
               </a>
             </div>
 
@@ -118,23 +119,16 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-4 mt-1.5">
-                <button
-                  type="submit"
-                  disabled={isPending}
-                  className="bg-red text-white px-6.5 py-3.5 text-[15px] font-semibold hover:bg-red-deep transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {isPending ? 'Wird gesendet…' : 'Anfrage senden'}
-                </button>
+                <AnfrageButton disabled={isPending} label={isPending ? "Wird gesendet…" : "Anfrage senden"} />
                 <span className="text-[12.5px] text-grey-soft">Wir melden uns bei Ihnen zurück.</span>
               </div>
 
               {visible && state.message && (
                 <div
-                  className={`px-4.5 py-4 text-[14.5px] border ${
-                    state.success
-                      ? 'bg-dark-2 border-red text-paper'
-                      : 'bg-dark-2 border-grey-line text-paper'
-                  }`}
+                  className={`px-4.5 py-4 text-[14.5px] border ${state.success
+                    ? 'bg-dark-2 border-red text-paper'
+                    : 'bg-dark-2 border-grey-line text-paper'
+                    }`}
                   role="status"
                 >
                   <strong className={state.success ? 'text-red' : 'text-grey-soft'}>

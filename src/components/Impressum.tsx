@@ -30,16 +30,16 @@ export default function Impressum() {
 
           <section className="mb-8">
             <h2 className="font-display font-bold text-xl mb-2">
-              Zuständige Aufsichtsbehörde / Handwerkskammer
+              Zuständige Aufsichtsbehörde
             </h2>
-            <p className="text-[15px] leading-relaxed">[Platzhalter ]</p>
+            <p className="text-[15px] leading-relaxed">Handwerkskammer für München und Oberbayern</p>
           </section>
 
           <section className="mb-8">
             <h2 className="font-display font-bold text-xl mb-2">
               Umsatzsteuer-ID
             </h2>
-            <p className="text-[15px] leading-relaxed">[Platzhalter]</p>
+            <p className="text-[15px] leading-relaxed">DE316910085</p>
           </section>
 
           <section>
