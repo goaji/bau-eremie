@@ -32,7 +32,7 @@ export default function Header() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden bg-transparent border-none text-white text-2xl"
+          className="md:hidden bg-transparent border-none text-black text-2xl"
           aria-label="Menü öffnen"
           aria-expanded={isOpen}
         >
@@ -45,13 +45,13 @@ export default function Header() {
         >
           <Link
             href="/#leistungen"
-            className=" hover:text-red no-underline text-[16.5px] font-medium"
+            className="text-white md:text-black hover:text-red no-underline text-[16.5px] font-medium"
           >
             Leistungen
           </Link>
           <Link
             href="/#kontakt"
-            className=" hover:text-red no-underline text-[16.5px] font-medium"
+            className="text-white md:text-black hover:text-red no-underline text-[16.5px] font-medium"
           >
             Kontakt
           </Link>
