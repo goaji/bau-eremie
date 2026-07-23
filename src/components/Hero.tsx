@@ -21,7 +21,7 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4 flex-wrap mb-10">
-            <AnfrageButton label="Anfrage senden" href="#kontakt" />
+            <AnfrageButton label="Anfrage senden" href="#anfrage-form" />
           </div>
 
 

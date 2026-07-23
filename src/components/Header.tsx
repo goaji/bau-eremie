@@ -55,7 +55,7 @@ export default function Header() {
           >
             Kontakt
           </Link>
-          <AnfrageButton label="Anfrage senden" href="/#kontakt" />
+          <AnfrageButton label="Anfrage senden" href="/#anfrage-form" />
         </nav>
       </div>
     </header>
