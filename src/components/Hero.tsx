@@ -8,9 +8,7 @@ export default function Hero() {
     >
       <div className="max-w-300 mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
         <div>
-
-
-          <h1 className="font-display font-extrabold text-[clamp(38px,5vw,58px)] leading-[1.3] tracking-tight text-white mb-5.5">
+          <h1 className="font-display font-extrabold text-[clamp(28px,6vw,36px)] md:text-[clamp(32px,4.5vw,44px)] lg:text-[clamp(44px,4vw,58px)] leading-[1.1] md:leading-[1.2] lg:leading-[1.3] tracking-tight text-white mb-5.5">
             <span className="text-red">Bauen </span>
             mit Energieberater-Verstand und
             <span className="text-red"> Energieberatung </span> mit Bauausführer-Verstand
@@ -23,8 +21,6 @@ export default function Hero() {
           <div className="flex gap-4 flex-wrap mb-10">
             <AnfrageButton label="Anfrage senden" href="#anfrage-form" />
           </div>
-
-
         </div>
 
         <div>

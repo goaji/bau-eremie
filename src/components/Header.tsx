@@ -13,19 +13,22 @@ export default function Header() {
       <div className="flex items-center justify-between px-8 py-8.5 max-w-300 mx-auto">
         <Link
           href="/"
-          className="flex items-center gap-4.5 font-display font-extrabold text-[31px] tracking-wide  no-underline"
+          className="flex items-center gap-4.5 font-display font-extrabold text-[31px] tracking-wide leading-[1.1]"
         >
           <Image
             src="/logoDark.svg"
             alt="Adrian Eremie Logo"
-            width={64}
-            height={66}
-            className="w-16 h-auto shrink-0"
+            width={80}
+            height={80}
+            className="w-20 h-auto shrink-0"
           />
-          <span>
+          <span >
             ADRIAN EREMIE
-            <span className="block font-mono font-normal text-[13px] tracking-[0.14em]  uppercase">
-              Planen. <span className="text-red">Bauen</span>. Vertrauen.
+            <span className="hidden min-[405px]:block text-red w-fit border-b-2 border-red font-mono font-normal text-[19px] tracking-[0.14em] uppercase pb-0.5">
+              BAUUNTERNEHMEN
+            </span>
+            <span className="hidden min-[405px]:block font-mono font-normal text-[11px] tracking-[0.14em] uppercase mt-2">
+              Planen. <span className="text-red">Bauen.</span> Vertrauen.
             </span>
           </span>
         </Link>
@@ -45,13 +48,13 @@ export default function Header() {
         >
           <Link
             href="/#leistungen"
-            className="text-white md:text-black hover:text-red no-underline text-[16.5px] font-medium"
+            className="text-white md:text-black hover:text-red text-[16.5px] font-medium"
           >
             Leistungen
           </Link>
           <Link
             href="/#kontakt"
-            className="text-white md:text-black hover:text-red no-underline text-[16.5px] font-medium"
+            className="text-white md:text-black hover:text-red text-[16.5px] font-medium"
           >
             Kontakt
           </Link>

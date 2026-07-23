@@ -33,10 +33,10 @@ export default function Datenschutz() {
               DSGVO (vorvertragliche Maßnahme) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
               Interesse an der Beantwortung von Anfragen).
             </p>
-            <p className="text-[15px] leading-relaxed text-[#4B4943]">
+            <p className="text-[15px] leading-relaxed">
               Der Versand erfolgt über den E-Mail-Dienst unseres Hosting-Anbieters Hostinger
               (Hostinger International Ltd.) per SMTP. Die eingegebenen Daten werden dabei nicht an
-              weitere Drittanbieter übermittelt. 
+              weitere Drittanbieter übermittelt.
             </p>
           </section>
 

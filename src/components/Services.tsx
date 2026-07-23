@@ -12,7 +12,7 @@ export default function Services() {
           {SERVICES.map((service, i) => (
             <div
               key={service.title}
-              className={`p-8 bg-white flex flex-col border-b md:border-b-0 border-[#C9C5BB] ${i < SERVICES.length - 1 ? "md:border-r" : ""
+              className={`p-8 bg-white flex flex-col border-b md:border-b-0 border-grey-soft ${(i + 1) % 2 !== 0 ? "md:border-r" : ""}  ${i < SERVICES.length - 1 ? "xl:border-r" : ""
                 }`}
             >
               <div className="w-15 h-15 mb-4.5 ">
@@ -21,14 +21,14 @@ export default function Services() {
               <h3 className="font-display font-bold text-2xl mb-3.5 ">
                 {service.title}
               </h3>
-              <p className="text-[15px] text-[#4B4943] mb-5 grow">
+              <p className="text-[15px] mb-5 grow">
                 {service.description}
               </p>
               <ul className="list-none">
                 {service.items.map((item) => (
                   <li
                     key={item}
-                    className="text-[13.5px] text-[#5A5850] pl-4 relative mb-2 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.75 before:h-[1.5px] before:bg-red"
+                    className="text-[13.5px] pl-4 relative mb-2 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.75 before:h-[1.5px] before:bg-red"
                   >
                     {item}
                   </li>

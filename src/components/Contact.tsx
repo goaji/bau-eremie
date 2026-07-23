@@ -46,7 +46,7 @@ export default function Contact() {
 
             <div className="mb-6.5 pb-6.5 border-b border-grey-line">
               <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">Telefon (auch WhatsApp)</div>
-              <a className="text-base font-medium text-white no-underline hover:text-red" href="tel:+491627141491">
+              <a className="text-base font-medium text-white hover:text-red" href="tel:+491627141491">
                 (+49) 0162 7141491
               </a>
             </div>
@@ -54,7 +54,7 @@ export default function Contact() {
             <div >
               <div className="font-mono text-[11.5px] tracking-widest uppercase text-grey-soft mb-1.5">E-Mail</div>
               <a
-                className="text-base font-medium text-white no-underline hover:text-red"
+                className="text-base font-medium text-white hover:text-red"
                 href="mailto:info@bau-eremie.de"
               >
                 info@bau-eremie.de

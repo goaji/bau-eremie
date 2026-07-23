@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const BASE_CLASSES =
-  "bg-red text-white px-6.5 py-3.5 text-[15px] font-semibold no-underline hover:bg-red-deep transition-colors";
+  "bg-red text-white px-6.5 py-3.5 text-[15px] font-semibold hover:bg-red-deep transition-colors";
 
 type AnfrageButtonProps =
   | {
